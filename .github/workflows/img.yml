@@ -24,8 +24,7 @@ jobs:
         if: steps.check_images.outcome == 'success'
         run: |
           # Comando para enviar as novas imagens para o disco compartilhado EFS
-          scp -i /labuser.ppk Imagem/* ec2-user@18.209.159.218:/var/www/html/img
-
+          scp -i ~/.ssh/labuser.ppk Imagem/* ec2-user@18.209.159.218:/var/www/html/img
 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
