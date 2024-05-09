@@ -4,7 +4,7 @@ on:
     branches:
       - "develop_test"
     paths:
-      - 'app/sitebike/img/*'
+      - 'Imagens/**'
 jobs:
   image_update:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
         if: steps.check_images.outcome == 'success'
         run: |
           # Comando para enviar as novas imagens para o disco compartilhado EFS
-          rsync -av --delete sitebike/img/ /var/www/html/img
+          rsync -av --delete Imagem/ /var/www/html/img
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
