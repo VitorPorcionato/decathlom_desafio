@@ -44,7 +44,7 @@ jobs:
 
       - name: Copy EC2 Terraform file
         run: |
-          cp AWS-EC2.tf .
+          cp ./AWS-EC2.tf .
 
       - name: Install Terraform
         run: |
