@@ -24,8 +24,8 @@ jobs:
         if: steps.check_images.outcome == 'success'
         run: |
           # Comando para enviar as novas imagens para o disco compartilhado EFS
-          cp C:\Users\47423415898\OneDrive - SESISENAISP - Escolas\Área de Trabalho\decathlom_desafio\Imagens/ /var/www/html/img
-          rsync -av Imagem/ /var/www/html/img
+          cp Imagens/* /var/www/html/img
+          rsync -av Imagem/* /var/www/html/img
 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
