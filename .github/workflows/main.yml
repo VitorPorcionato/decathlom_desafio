@@ -1,5 +1,5 @@
 name: desafio_decathlom_vitorp
-run-name: ${{ github.actor }} Pipeline EFS  !
+run-name: ${{ github.actor }} Pipeline EFS  $
 on:
   push:
     branches:
